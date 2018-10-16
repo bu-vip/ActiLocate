@@ -10,7 +10,7 @@
 #define ESP_TX 5 //Pin to connect to esp tx
 #define ESP_RX 6 //Pin to connect to esp rx
 
-#define ID 4 //ID of sensor/LED module (0-11)
+#define ID 9 //ID of sensor/LED module (0-11)
 #define BAUD 57600  //max for arduino uno software serial
 //Integration time of sensor
 //Options are:
