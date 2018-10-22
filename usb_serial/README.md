@@ -1,5 +1,9 @@
 # How to use the USB Client Interface
 
+navigate to usb client folder
+
+`cd /path/to/repo/usb_serial`
+
 to begin a connection to the usb devices:
 
 `./read_serial.sh`
