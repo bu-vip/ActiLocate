@@ -23,7 +23,6 @@ for file in files:
     for line in raw:
         # check if timestamp reset, add a fixed value
         if str(line[0]) == "t":
-            print("BUFFER")
             buf += 1000
         # check if line begins with correct letter
         if line[0] != "I":
