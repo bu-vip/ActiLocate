@@ -1,0 +1,490 @@
+eolchar set to '*'
+opened port /dev/ttyACM8
+-2read string:ID: 9 Time: 2 LED: 0 R: 362 G: 350 B: 246 C: 911   
+
+ID: 9 Time: 3 LED: 0 R: 361 G: 350 B: 246 C: 909   
+
+ID: 9 Time: 4 LED: 0 R: 357 G: 347 B: 244 C: 902   
+
+ID: 9 Time: 5 LED: 0 R: 362 G: 350 B: 246 C: 911   
+
+ID: 9 Time: 6 LED: 0 R: 362 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 7 LED: 0 R: 362 G: 350 B: 246 C: 911   
+
+ID: 9 Time: 8 LED: 0 R: 362 G: 351 B: 247 C: 914   
+
+ID: 9 Time: 9 LED: 1 R: 366 G: 354 B: 248 C: 920   
+
+ID: 9 Time: 10 LED: 0 R: 371 G: 358 B: 251 C: 932   
+
+ID: 9 Time: 11 LED: 0 R: 366 G: 354 B: 248 C: 920   
+
+ID: 9 Time: 12 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 13 LED: 0 R: 356 G: 347 B: 244 C: 902   
+
+ID: 9 Time: 14 LED: 0 R: 360 G: 349 B: 245 C: 907   
+
+ID: 9 Time: 15 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 16 LED: 0 R: 359 G: 349 B: 245 C: 906   
+
+ID: 9 Time: 17 LED: 0 R: 357 G: 346 B: 244 C: 900   
+
+ID: 9 Time: 18 LED: 0 R: 365 G: 353 B: 249 C: 920   
+
+ID: 9 Time: 19 LED: 0 R: 364 G: 353 B: 248 C: 918   
+
+ID: 9 Time: 20 LED: 0 R: 363 G: 352 B: 247 C: 916   
+
+ID: 9 Time: 21 LED: 0 R: 364 G: 352 B: 249 C: 918   
+
+ID: 9 Time: 22 LED: 1 R: 365 G: 354 B: 249 C: 921   
+
+ID: 9 Time: 23 LED: 0 R: 374 G: 360 B: 253 C: 940   
+
+ID: 9 Time: 24 LED: 0 R: 367 G: 355 B: 249 C: 923   
+
+ID: 9 Time: 25 LED: 0 R: 363 G: 352 B: 248 C: 916   
+
+ID: 9 Time: 26 LED: 0 R: 356 G: 347 B: 244 C: 900   
+
+ID: 9 Time: 27 LED: 0 R: 361 G: 350 B: 246 C: 909   
+
+ID: 9 Time: 28 LED: 0 R: 361 G: 350 B: 246 C: 911   
+
+ID: 9 Time: 29 LED: 0 R: 359 G: 349 B: 245 C: 906   
+
+ID: 9 Time: 30 LED: 0 R: 357 G: 347 B: 244 C: 900   
+
+ID: 9 Time: 31 LED: 0 R: 361 G: 350 B: 246 C: 909   
+
+ID: 9 Time: 32 LED: 0 R: 363 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 33 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 34 LED: 0 R: 359 G: 349 B: 245 C: 906   
+
+ID: 9 Time: 35 LED: 1 R: 364 G: 353 B: 248 C: 918   
+
+ID: 9 Time: 36 LED: 0 R: 370 G: 356 B: 251 C: 928   
+
+ID: 9 Time: 37 LED: 0 R: 368 G: 356 B: 250 C: 927   
+
+ID: 9 Time: 38 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 39 LED: 0 R: 354 G: 345 B: 244 C: 896   
+
+ID: 9 Time: 40 LED: 0 R: 360 G: 350 B: 246 C: 909   
+
+ID: 9 Time: 41 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 42 LED: 0 R: 359 G: 348 B: 245 C: 906   
+
+ID: 9 Time: 43 LED: 0 R: 356 G: 346 B: 244 C: 899   
+
+ID: 9 Time: 44 LED: 0 R: 362 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 45 LED: 0 R: 365 G: 354 B: 249 C: 920   
+
+ID: 9 Time: 46 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 47 LED: 0 R: 359 G: 349 B: 245 C: 906   
+
+ID: 9 Time: 48 LED: 1 R: 362 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 49 LED: 0 R: 371 G: 357 B: 251 C: 932   
+
+ID: 9 Time: 50 LED: 0 R: 365 G: 354 B: 248 C: 920   
+
+ID: 9 Time: 51 LED: 0 R: 363 G: 350 B: 246 C: 915   
+
+ID: 9 Time: 52 LED: 0 R: 356 G: 347 B: 245 C: 902   
+
+ID: 9 Time: 53 LED: 0 R: 362 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 54 LED: 0 R: 365 G: 350 B: 246 C: 922   
+
+ID: 9 Time: 55 LED: 0 R: 363 G: 352 B: 248 C: 917   
+
+ID: 9 Time: 56 LED: 0 R: 360 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 57 LED: 0 R: 363 G: 354 B: 250 C: 914   
+
+ID: 9 Time: 58 LED: 0 R: 364 G: 353 B: 248 C: 917   
+
+ID: 9 Time: 59 LED: 0 R: 362 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 60 LED: 0 R: 362 G: 351 B: 247 C: 906   
+
+ID: 9 Time: 61 LED: 1 R: 362 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 62 LED: 0 R: 371 G: 358 B: 252 C: 932   
+
+ID: 9 Time: 63 LED: 0 R: 365 G: 353 B: 248 C: 920   
+
+ID: 9 Time: 64 LED: 0 R: 361 G: 350 B: 246 C: 909   
+
+ID: 9 Time: 65 LED: 0 R: 353 G: 345 B: 243 C: 894   
+
+ID: 9 Time: 66 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 67 LED: 0 R: 362 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 68 LED: 0 R: 359 G: 349 B: 246 C: 907   
+
+ID: 9 Time: 69 LED: 0 R: 358 G: 349 B: 246 C: 908   
+
+ID: 9 Time: 70 LED: 0 R: 362 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 71 LED: 0 R: 362 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 72 LED: 0 R: 361 G: 350 B: 246 C: 911   
+
+ID: 9 Time: 73 LED: 0 R: 360 G: 349 B: 246 C: 907   
+
+ID: 9 Time: 74 LED: 1 R: 362 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 75 LED: 0 R: 370 G: 357 B: 251 C: 930   
+
+ID: 9 Time: 76 LED: 0 R: 368 G: 356 B: 251 C: 928   
+
+ID: 9 Time: 77 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 78 LED: 0 R: 355 G: 346 B: 244 C: 898   
+
+ID: 9 Time: 79 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 80 LED: 0 R: 362 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 81 LED: 0 R: 359 G: 349 B: 246 C: 907   
+
+ID: 9 Time: 82 LED: 0 R: 357 G: 347 B: 245 C: 903   
+
+ID: 9 Time: 83 LED: 0 R: 365 G: 354 B: 249 C: 920   
+
+ID: 9 Time: 84 LED: 0 R: 366 G: 355 B: 250 C: 924   
+
+ID: 9 Time: 85 LED: 0 R: 365 G: 354 B: 249 C: 921   
+
+ID: 9 Time: 86 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 87 LED: 1 R: 365 G: 354 B: 249 C: 921   
+
+ID: 9 Time: 88 LED: 0 R: 375 G: 362 B: 254 C: 943   
+
+ID: 9 Time: 89 LED: 0 R: 369 G: 357 B: 251 C: 931   
+
+ID: 9 Time: 90 LED: 0 R: 365 G: 354 B: 250 C: 922   
+
+ID: 9 Time: 91 LED: 0 R: 355 G: 346 B: 244 C: 899   
+
+ID: 9 Time: 92 LED: 0 R: 363 G: 352 B: 248 C: 915   
+
+ID: 9 Time: 93 LED: 0 R: 363 G: 352 B: 248 C: 916   
+
+ID: 9 Time: 94 LED: 0 R: 359 G: 349 B: 246 C: 907   
+
+ID: 9 Time: 95 LED: 0 R: 357 G: 347 B: 245 C: 902   
+
+ID: 9 Time: 96 LED: 0 R: 362 G: 351 B: 247 C: 914   
+
+ID: 9 Time: 97 LED: 0 R: 363 G: 352 B: 248 C: 914   
+
+ID: 9 Time: 98 LED: 0 R: 360 G: 350 B: 246 C: 909   
+
+ID: 9 Time: 99 LED: 0 R: 359 G: 349 B: 246 C: 906   
+
+ID: 9 Time: 100 LED: 1 R: 364 G: 353 B: 248 C: 919   
+
+ID: 9 Time: 101 LED: 0 R: 371 G: 358 B: 252 C: 933   
+
+ID: 9 Time: 102 LED: 0 R: 365 G: 354 B: 249 C: 921   
+
+ID: 9 Time: 103 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 104 LED: 0 R: 353 G: 345 B: 243 C: 895   
+
+ID: 9 Time: 105 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 106 LED: 0 R: 362 G: 351 B: 248 C: 913   
+
+ID: 9 Time: 107 LED: 0 R: 362 G: 351 B: 248 C: 914   
+
+ID: 9 Time: 108 LED: 0 R: 357 G: 347 B: 245 C: 903   
+
+ID: 9 Time: 109 LED: 0 R: 361 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 110 LED: 0 R: 362 G: 351 B: 247 C: 914   
+
+ID: 9 Time: 111 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 112 LED: 0 R: 360 G: 349 B: 246 C: 909   
+
+ID: 9 Time: 113 LED: 1 R: 363 G: 352 B: 247 C: 914   
+
+ID: 9 Time: 114 LED: 0 R: 370 G: 357 B: 251 C: 931   
+
+ID: 9 Time: 115 LED: 0 R: 368 G: 356 B: 251 C: 928   
+
+ID: 9 Time: 116 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 117 LED: 0 R: 355 G: 346 B: 244 C: 898   
+
+ID: 9 Time: 118 LED: 0 R: 365 G: 354 B: 250 C: 921   
+
+ID: 9 Time: 119 LED: 0 R: 365 G: 354 B: 249 C: 921   
+
+ID: 9 Time: 120 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 121 LED: 0 R: 360 G: 350 B: 247 C: 910   
+
+ID: 9 Time: 122 LED: 0 R: 366 G: 355 B: 250 C: 923   
+
+
+timeout set to 15000 millisecs
+eolchar set to '*'
+opened port /dev/ttyACM8
+-2read string:ID: 9 Time: 2 LED: 0 R: 357 G: 347 B: 245 C: 901   
+
+ID: 9 Time: 3 LED: 0 R: 361 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 4 LED: 0 R: 362 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 5 LED: 0 R: 361 G: 350 B: 247 C: 910   
+
+ID: 9 Time: 6 LED: 0 R: 360 G: 349 B: 246 C: 907   
+
+ID: 9 Time: 7 LED: 1 R: 362 G: 351 B: 248 C: 914   
+
+ID: 9 Time: 8 LED: 0 R: 373 G: 360 B: 253 C: 938   
+
+ID: 9 Time: 9 LED: 0 R: 365 G: 354 B: 249 C: 920   
+
+ID: 9 Time: 10 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 11 LED: 0 R: 354 G: 345 B: 243 C: 895   
+
+ID: 9 Time: 12 LED: 0 R: 361 G: 351 B: 247 C: 911   
+
+ID: 9 Time: 13 LED: 0 R: 361 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 14 LED: 0 R: 359 G: 349 B: 246 C: 907   
+
+ID: 9 Time: 15 LED: 0 R: 359 G: 349 B: 246 C: 908   
+
+ID: 9 Time: 16 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 17 LED: 0 R: 363 G: 352 B: 248 C: 917   
+
+ID: 9 Time: 18 LED: 0 R: 364 G: 353 B: 249 C: 918   
+
+ID: 9 Time: 19 LED: 0 R: 362 G: 352 B: 248 C: 915   
+
+ID: 9 Time: 20 LED: 1 R: 365 G: 354 B: 249 C: 921   
+
+ID: 9 Time: 21 LED: 0 R: 374 G: 361 B: 254 C: 941   
+
+ID: 9 Time: 22 LED: 0 R: 369 G: 357 B: 251 C: 930   
+
+ID: 9 Time: 23 LED: 0 R: 363 G: 353 B: 248 C: 917   
+
+ID: 9 Time: 24 LED: 0 R: 356 G: 347 B: 245 C: 901   
+
+ID: 9 Time: 25 LED: 0 R: 363 G: 353 B: 248 C: 917   
+
+ID: 9 Time: 26 LED: 0 R: 361 G: 351 B: 247 C: 911   
+
+ID: 9 Time: 27 LED: 0 R: 360 G: 349 B: 246 C: 908   
+
+ID: 9 Time: 28 LED: 0 R: 357 G: 347 B: 245 C: 902   
+
+ID: 9 Time: 29 LED: 0 R: 361 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 30 LED: 0 R: 362 G: 351 B: 247 C: 914   
+
+ID: 9 Time: 31 LED: 0 R: 360 G: 350 B: 246 C: 909   
+
+ID: 9 Time: 32 LED: 0 R: 361 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 33 LED: 1 R: 362 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 34 LED: 0 R: 371 G: 358 B: 252 C: 932   
+
+ID: 9 Time: 35 LED: 0 R: 365 G: 354 B: 249 C: 920   
+
+ID: 9 Time: 36 LED: 0 R: 361 G: 351 B: 247 C: 911   
+
+ID: 9 Time: 37 LED: 0 R: 353 G: 344 B: 243 C: 894   
+
+ID: 9 Time: 38 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 39 LED: 0 R: 365 G: 354 B: 249 C: 920   
+
+ID: 9 Time: 40 LED: 0 R: 360 G: 349 B: 246 C: 908   
+
+ID: 9 Time: 41 LED: 0 R: 356 G: 347 B: 245 C: 901   
+
+ID: 9 Time: 42 LED: 0 R: 361 G: 350 B: 247 C: 910   
+
+ID: 9 Time: 43 LED: 0 R: 362 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 44 LED: 0 R: 361 G: 351 B: 246 C: 911   
+
+ID: 9 Time: 45 LED: 0 R: 360 G: 349 B: 246 C: 908   
+
+ID: 9 Time: 46 LED: 1 R: 362 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 47 LED: 0 R: 373 G: 360 B: 253 C: 939   
+
+ID: 9 Time: 48 LED: 0 R: 365 G: 354 B: 249 C: 920   
+
+ID: 9 Time: 49 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 50 LED: 0 R: 356 G: 347 B: 244 C: 902   
+
+ID: 9 Time: 51 LED: 0 R: 362 G: 352 B: 248 C: 915   
+
+ID: 9 Time: 52 LED: 0 R: 363 G: 352 B: 248 C: 915   
+
+ID: 9 Time: 53 LED: 0 R: 363 G: 349 B: 246 C: 918   
+
+ID: 9 Time: 54 LED: 0 R: 360 G: 350 B: 247 C: 910   
+
+ID: 9 Time: 55 LED: 0 R: 365 G: 354 B: 249 C: 921   
+
+ID: 9 Time: 56 LED: 0 R: 363 G: 355 B: 250 C: 916   
+
+ID: 9 Time: 57 LED: 0 R: 363 G: 352 B: 248 C: 915   
+
+ID: 9 Time: 58 LED: 0 R: 361 G: 351 B: 247 C: 911   
+
+ID: 9 Time: 59 LED: 1 R: 364 G: 353 B: 248 C: 911   
+
+ID: 9 Time: 60 LED: 0 R: 370 G: 357 B: 251 C: 930   
+
+ID: 9 Time: 61 LED: 0 R: 366 G: 354 B: 249 C: 921   
+
+ID: 9 Time: 62 LED: 0 R: 361 G: 351 B: 247 C: 911   
+
+ID: 9 Time: 63 LED: 0 R: 354 G: 345 B: 244 C: 896   
+
+ID: 9 Time: 64 LED: 0 R: 360 G: 349 B: 246 C: 908   
+
+ID: 9 Time: 65 LED: 0 R: 360 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 66 LED: 0 R: 359 G: 349 B: 246 C: 907   
+
+ID: 9 Time: 67 LED: 0 R: 357 G: 348 B: 245 C: 903   
+
+ID: 9 Time: 68 LED: 0 R: 362 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 69 LED: 0 R: 362 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 70 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 71 LED: 0 R: 359 G: 349 B: 246 C: 907   
+
+ID: 9 Time: 72 LED: 1 R: 363 G: 351 B: 247 C: 914   
+
+ID: 9 Time: 73 LED: 0 R: 370 G: 357 B: 251 C: 931   
+
+ID: 9 Time: 74 LED: 0 R: 365 G: 354 B: 249 C: 920   
+
+ID: 9 Time: 75 LED: 0 R: 361 G: 350 B: 246 C: 910   
+
+ID: 9 Time: 76 LED: 0 R: 353 G: 344 B: 243 C: 894   
+
+ID: 9 Time: 77 LED: 0 R: 362 G: 351 B: 247 C: 912   
+
+ID: 9 Time: 78 LED: 0 R: 362 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 79 LED: 0 R: 362 G: 352 B: 248 C: 915   
+
+ID: 9 Time: 80 LED: 0 R: 356 G: 347 B: 244 C: 900   
+
+ID: 9 Time: 81 LED: 0 R: 361 G: 350 B: 246 C: 909   
+
+ID: 9 Time: 82 LED: 0 R: 363 G: 352 B: 248 C: 915   
+
+ID: 9 Time: 83 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 84 LED: 0 R: 364 G: 353 B: 249 C: 918   
+
+ID: 9 Time: 85 LED: 1 R: 365 G: 354 B: 249 C: 921   
+
+ID: 9 Time: 86 LED: 0 R: 371 G: 358 B: 252 C: 934   
+
+ID: 9 Time: 87 LED: 0 R: 369 G: 357 B: 251 C: 928   
+
+ID: 9 Time: 88 LED: 0 R: 365 G: 354 B: 250 C: 922   
+
+ID: 9 Time: 89 LED: 0 R: 357 G: 348 B: 246 C: 905   
+
+ID: 9 Time: 90 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 91 LED: 0 R: 362 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 92 LED: 0 R: 360 G: 350 B: 247 C: 910   
+
+ID: 9 Time: 93 LED: 0 R: 356 G: 346 B: 244 C: 900   
+
+ID: 9 Time: 94 LED: 0 R: 362 G: 351 B: 247 C: 911   
+
+ID: 9 Time: 95 LED: 0 R: 362 G: 351 B: 247 C: 914   
+
+ID: 9 Time: 96 LED: 0 R: 361 G: 350 B: 247 C: 910   
+
+ID: 9 Time: 97 LED: 0 R: 359 G: 349 B: 245 C: 906   
+
+ID: 9 Time: 98 LED: 1 R: 361 G: 350 B: 246 C: 911   
+
+ID: 9 Time: 99 LED: 0 R: 370 G: 357 B: 251 C: 931   
+
+ID: 9 Time: 100 LED: 0 R: 366 G: 354 B: 249 C: 922   
+
+ID: 9 Time: 101 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 102 LED: 0 R: 353 G: 345 B: 243 C: 895   
+
+ID: 9 Time: 103 LED: 0 R: 360 G: 349 B: 246 C: 908   
+
+ID: 9 Time: 104 LED: 0 R: 365 G: 354 B: 249 C: 921   
+
+ID: 9 Time: 105 LED: 0 R: 359 G: 349 B: 246 C: 907   
+
+ID: 9 Time: 106 LED: 0 R: 357 G: 348 B: 245 C: 903   
+
+ID: 9 Time: 107 LED: 0 R: 361 G: 350 B: 247 C: 911   
+
+ID: 9 Time: 108 LED: 0 R: 361 G: 351 B: 247 C: 911   
+
+ID: 9 Time: 109 LED: 0 R: 360 G: 350 B: 246 C: 909   
+
+ID: 9 Time: 110 LED: 0 R: 360 G: 350 B: 246 C: 908   
+
+ID: 9 Time: 111 LED: 1 R: 363 G: 351 B: 247 C: 914   
+
+ID: 9 Time: 112 LED: 0 R: 374 G: 360 B: 253 C: 939   
+
+ID: 9 Time: 113 LED: 0 R: 365 G: 354 B: 248 C: 919   
+
+ID: 9 Time: 114 LED: 0 R: 360 G: 350 B: 246 C: 909   
+
+ID: 9 Time: 115 LED: 0 R: 353 G: 344 B: 243 C: 894   
+
+ID: 9 Time: 116 LED: 0 R: 361 G: 351 B: 247 C: 911   
+
+ID: 9 Time: 117 LED: 0 R: 364 G: 354 B: 249 C: 920   
+
+ID: 9 Time: 118 LED: 0 R: 361 G: 351 B: 247 C: 913   
+
+ID: 9 Time: 119 LED: 0 R: 358 G: 349 B: 246 C: 906   
+
+ID: 9 Time: 120 LED: 0 R: 364 G: 353 B: 248 C: 918   
+
+ID: 9 Time: 121 LED: 0 R: 366 G: 354 B: 250 C: 922   
+
+ID: 9 Time: 122 LED: 0 R: 365 G: 353 B:
+timeout set to 15000 millisecs

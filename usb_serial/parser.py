@@ -1,9 +1,8 @@
-import pickle
 import glob
+import config
 
 # find files beginning with ACM in this directory
-files = glob.glob("ACM*")
-files.extend(glob.glob("USB*"))
+files = glob.glob("raw/raw*")
 
 
 # number of arguments to expect per line
@@ -51,9 +50,6 @@ for file in files:
             data[time].append(packet)
 
 print("NUM KEYS: ", len(data.keys()))
-out = open("data.pkl", "wb")
-pickle.dump(data, out)
-out.close()
 
 num_sensors = 12
 prev_id = -1
@@ -70,6 +66,8 @@ for time in data.keys():
                 state_id = this_id
             output[int(this_id)] = "\tID: " + this_id + "\tState: " + state + " R: " + sensor["r"] + " G: " + sensor["g"] + " B: " + sensor["b"] + " C: " + sensor["c"]
 
+        if state_id == prev_id:
+            state_id=-1
         if state_id != prev_id:
             prev_id = state_id
         print("Timestamp: ", time, " State ID: ", state_id)
