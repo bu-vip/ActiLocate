@@ -1,76 +1,129 @@
 import glob
+import numpy as np
 import config
 
-# find files beginning with ACM in this directory
+# find files in the raw directory
 files = glob.glob("raw/raw*")
 
 
 # number of arguments to expect per line
 kargs = 14
+ksensors = 12
 
-data = {}
+# take raw data files and convert to a dictionary of timestamps
+# each timestamp has an array of packets.
+def parse_data(files):
+    # the data dictionary used to store all relevant values.
+    data = {}
 
-for file in files:
-    print(file)
-    f = open(file, 'r')
-    raw = f.readlines()
+    # iterate through all generated raw files
+    for file in files:
 
-    #init id
-    id = -1
+        f = open(file, 'r')
+        raw = f.readlines()
 
-    buf = 0
-    for line in raw:
-        # check if timestamp reset, add a fixed value
-        if str(line[0]) == "t":
-            buf += 1000
-        # check if line begins with correct letter
-        if line[0] != "I":
-            continue
-        # split line by whitespace
-        line = line.split()
+        # initialize buffer to zero, this is used to increment the timestamps if
+        # a reset occurs during the reading.
+        buf = 0
 
-        if len(line) != kargs:
-            print("Warning: skipping line... invalid number of arguments")
-            continue
+        # traverse through the file and add good data to dictionary
+        for line in raw:
+            # check if timestamp reset, add a fixed value
+            if str(line[0]) == "t":
+                # increment by a large enough value, say 1000
+                buf += 1000
+            # check if line begins with correct letter
+            if line[0] != "I":
+                continue
 
-        # assign id
-        time = int(buf) + int(line[3])
-        # populate object with all pertinant info
-        packet = {}
-        packet["id"] = line[1]
-        packet["led_state"] = line[5]
-        packet["r"] = line[7]
-        packet["g"] = line[9]
-        packet["b"] = line[11]
-        packet["c"] = line[13]
-        if time in data.keys():
-            data[time].append(packet)
-        else:
-            data[time] = []
-            data[time].append(packet)
+            # split line by whitespace
+            line = line.split()
 
-print("NUM KEYS: ", len(data.keys()))
+            # verify line is the correct length
+            if len(line) != kargs:
+                continue
 
-num_sensors = 12
-prev_id = -1
-state_id = -1
-for time in data.keys():
-    this_time = data[time]
-    output = {}
-    if len(this_time) == num_sensors:
-        for i in range(0,num_sensors):
+            # create pseudo timestamp
+            time = int(buf) + int(line[3])
+
+            # populate packet with this line's info. this will be appended to the
+            # data dictionary at the given timestamp.
+            packet = {}
+            packet["id"] = line[1]
+            packet["led_state"] = line[5]
+            packet["r"] = line[7]
+            packet["g"] = line[9]
+            packet["b"] = line[11]
+            packet["c"] = line[13]
+
+            # add packet to appropriate time in the data dictionary
+            if time in data.keys():
+                data[time].append(packet)
+            else:
+                data[time] = []
+                data[time].append(packet)
+
+    # trim data to only contain timestamps for which we have all data.
+    # if that timestamp has exactly ksensors number of packets,
+    # then we have received all the data for that timestamp.
+    bad_times = []
+    for time in data.keys():
+        if len(data[time]) != ksensors:
+            bad_times.append(time)
+
+    for time in bad_times:
+        del data[time]
+
+
+    return data
+
+# take sensor-wise state values and determine true state id
+# from the configured lighting pattern
+def determine_state(vec):
+    mat = config.CFG["state_matrix"]
+
+    krow, kcol = mat.shape
+    # array used to find rows which match the state
+    match = np.array([1]*kcol)
+
+    i = 0
+    for row in mat.T:
+        print(row, vec)
+        if row == vec:
+            return i
+        i += 1
+
+# send parsed to one master file
+def save_to_file(data):
+    # iterate through all timestamps and generate strings to print
+    for time in data.keys():
+        
+        this_time = data[time]
+        output = {}
+        # initialize state vector to populate with sensor-wise state info.
+        # this will be compared against the expected pattern in the config
+        # file to get the state that the system is in at this timestamp
+        state_vec = np.array([-1]*ksensors)
+        # get data from each sensor at the given timestamp.
+        for i in range(0, ksensors):
             sensor = this_time[i]
             this_id = sensor["id"]
+
+            # get specific sensor state and update state_vec
             state = sensor["led_state"]
-            if int(state) == 1:
-                state_id = this_id
+            
+            state_vec[int(this_id)] = int(state)
+
+            # generate output string
             output[int(this_id)] = "\tID: " + this_id + "\tState: " + state + " R: " + sensor["r"] + " G: " + sensor["g"] + " B: " + sensor["b"] + " C: " + sensor["c"]
 
-        if state_id == prev_id:
-            state_id=-1
-        if state_id != prev_id:
-            prev_id = state_id
+        # get true state id from the configured lighting pattern
+        state_id = determine_state(state_vec)
+
+        # print data
         print("Timestamp: ", time, " State ID: ", state_id)
-        for i in range(0,num_sensors):
+        for i in range(0,ksensors):
             print(output[i])
 
+my_data = parse_data(files)
+save_to_file(my_data)
