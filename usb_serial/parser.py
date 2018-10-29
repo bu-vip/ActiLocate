@@ -79,22 +79,58 @@ def parse_data(files):
 
 # take sensor-wise state values and determine true state id
 # from the configured lighting pattern
-def determine_state(vec):
+def determine_state(vec, mem):
     mat = config.CFG["state_matrix"]
-
+    
     krow, kcol = mat.shape
     # array used to find rows which match the state
-    match = np.array([1]*kcol)
-
+    match = np.array([0]*krow)
+    
     i = 0
     for row in mat:
         if (row == vec).all():
-            return i
+            match[i] = 1
         i += 1
+
+    match_indices = np.array(match.nonzero()).flatten()
+    if len(match_indices) == 1:
+        return match_indices[0]
+    elif len(match_indices) == 0:
+        print("======= ERROR: state not found")
+        return -1
+
+
+    inc = 0
+    # continue looking until we have gone through all memory
+    while (inc < len(mem)):
+        mem_match_indices = [] # populate with current step match
+        prev_mem_val = mem[-inc] # get mem row corresponding to step
+
+        for match in match_indices:
+            prev_mem_loc = match - inc
+            row = mat[prev_mem_loc,:]
+            if (row == prev_mem_val).all():
+                # if this previous value is consistent
+                # add to new match list
+                mem_match_indices.append(prev_mem_loc)
+
+        if len(mem_match_indices) == 1:
+            return mem_match_indices[0]
+        match_indices = mem_match_indices
+        # go back another step
+        inc += 1
+    print("warning, skipping additional matches")
+    if len(match_indices) > 0:
+        return match_indices[0]
+    else:
+        print("Could not accurately find state id")
+        return None
+    
 
 # send parsed to one master file
 def save_to_file(data):
     # iterate through all timestamps and generate strings to print
+    mem = []
     for time in data.keys():
         
         this_time = data[time]
@@ -117,7 +153,10 @@ def save_to_file(data):
             output[int(this_id)] = "\tID: " + this_id + "\tState: " + state + " R: " + sensor["r"] + " G: " + sensor["g"] + " B: " + sensor["b"] + " C: " + sensor["c"]
 
         # get true state id from the configured lighting pattern
-        state_id = determine_state(state_vec)
+        state_id = determine_state(state_vec, mem)
+        mem.append(state_vec)
+        if len(mem) > 2*ksensors:
+            mem.pop(0)
 
         # print data
         print("Timestamp: ", time, " State ID: ", state_id)
