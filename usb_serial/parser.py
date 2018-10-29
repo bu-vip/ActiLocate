@@ -87,9 +87,8 @@ def determine_state(vec):
     match = np.array([1]*kcol)
 
     i = 0
-    for row in mat.T:
-        print(row, vec)
-        if row == vec:
+    for row in mat:
+        if (row == vec).all():
             return i
         i += 1
 
