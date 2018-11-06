@@ -11,7 +11,7 @@ echo "please specify filesystem, \"windows\" or \"linux\" "
 exit
 fi
 # note: change the /dev/tty... to the corresponding usb files
-./read_sensor.sh /dev/ttyACM10 raw/raw0.txt &
+./read_sensor.sh /dev/ttyACM0 raw/raw0.txt &
 ./read_sensor.sh /dev/ttyACM1 raw/raw1.txt & 
 ./read_sensor.sh /dev/ttyACM2 raw/raw2.txt &
 ./read_sensor.sh /dev/ttyACM3 raw/raw3.txt &
