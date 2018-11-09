@@ -21,6 +21,7 @@ def parse_data(files):
 
         f = open(file, 'r')
         raw = f.readlines()
+        f.close()
 
         # initialize buffer to zero, this is used to increment the timestamps if
         # a reset occurs during the reading.
@@ -128,9 +129,10 @@ def determine_state(vec, mem):
     
 
 # send parsed to one master file
-def save_to_file(data):
+def save_to_file(data, filename):
     # iterate through all timestamps and generate strings to print
     mem = []
+    f = open(filename, "w")
     for time in data.keys():
         
         this_time = data[time]
@@ -158,10 +160,16 @@ def save_to_file(data):
         if len(mem) > 2*ksensors:
             mem.pop(0)
 
-        # print data
-        print("Timestamp: ", time, " State ID: ", state_id)
+        # write data
+        line = "Timestamp: " +  str(time) + " State ID: " + str(state_id)
+        f.write(line)
         for i in range(0,ksensors):
-            print(output[i])
+            f.write(output[i])
+    f.close()
 
-my_data = parse_data(files)
-save_to_file(my_data)
+if __name__ == "__main__":
+    # create dictionary of all timestamps
+    my_data = parse_data(files)
+
+    # format to strings and write to file
+    save_to_file(my_data, "output.txt")

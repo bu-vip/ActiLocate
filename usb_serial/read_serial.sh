@@ -23,3 +23,7 @@ fi
 ./read_sensor.sh /dev/ttyACM9 raw/raw9.txt &
 ./read_sensor.sh /dev/ttyUSB0 raw/raw10.txt &
 ./read_sensor.sh /dev/ttyUSB1 raw/raw11.txt 
+
+echo "parsing raw data..."
+sleep 1
+python3.6 parser.py
