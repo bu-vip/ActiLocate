@@ -126,7 +126,7 @@ int serialport_read_until(int fd, char* buf, char until, int buf_max, int timeou
         int n = read(fd, b, 1);  // read a char at a time
         if( n==-1) return -1;    // couldn't read
         if( n==0 ) {
-            usleep( 1 * 100 );  // wait 1 msec try again
+            usleep( 1 * 1000 );  // wait 1 msec try again
             timeout--;
             if( timeout==0 ) return -2;
             continue;

@@ -131,8 +131,15 @@ def determine_state(vec, mem):
 # send parsed to one master file
 def save_to_file(data, filename):
     # iterate through all timestamps and generate strings to print
+    num_states = len(config.CFG["state_matrix"])
+    inc = 0
     mem = []
-    f = open(filename, "w")
+
+    file_num = 0
+    
+    this_file = filename + "_" + str(file_num) + ".txt"
+    f = open(this_file, "w")
+    
     for time in data.keys():
         
         this_time = data[time]
@@ -152,16 +159,27 @@ def save_to_file(data, filename):
             state_vec[int(this_id)] = int(state)
 
             # generate output string
-            output[int(this_id)] = "\tID: " + this_id + "\tState: " + state + " R: " + sensor["r"] + " G: " + sensor["g"] + " B: " + sensor["b"] + " C: " + sensor["c"]
+            output[int(this_id)] = "\tID: " + this_id + "\tState: " + state + " R: " + sensor["r"] + " G: " + sensor["g"] + " B: " + sensor["b"] + " C: " + sensor["c"]+"\n"
 
         # get true state id from the configured lighting pattern
         state_id = determine_state(state_vec, mem)
+        if state_id == 0:
+            # reset counter
+            inc = 0
+        elif inc == num_states:
+            inc = 0
+            f.close()
+            file_num += 1
+            this_file = filename + "_" + str(file_num) + ".txt"
+            f.open(this_file, "w")
+        else:
+            inc += 1
         mem.append(state_vec)
         if len(mem) > 2*ksensors:
             mem.pop(0)
 
         # write data
-        line = "Timestamp: " +  str(time) + " State ID: " + str(state_id)
+        line = "Timestamp: " +  str(time) + " State ID: " + str(state_id)+"\n"
         f.write(line)
         for i in range(0,ksensors):
             f.write(output[i])
@@ -172,4 +190,4 @@ if __name__ == "__main__":
     my_data = parse_data(files)
 
     # format to strings and write to file
-    save_to_file(my_data, "output.txt")
+    save_to_file(my_data, "output")
