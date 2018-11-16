@@ -10,12 +10,16 @@ files = glob.glob("raw/raw*")
 kargs = 14
 ksensors = 12
 
+# buffer for duplicate timestamps
+buf_value = 100000
+
 # take raw data files and convert to a dictionary of timestamps
 # each timestamp has an array of packets.
 def parse_data(files):
-    # the data dictionary used to store all relevant values.
+    cycles = []
+    # the data dictionary used to store all relevant values
     data = {}
-
+    
     # iterate through all generated raw files
     for file in files:
 
@@ -32,7 +36,7 @@ def parse_data(files):
             # check if timestamp reset, add a fixed value
             if str(line[0]) == "t":
                 # increment by a large enough value, say 1000
-                buf += 1000
+                buf += buf_value
             # check if line begins with correct letter
             if line[0] != "I":
                 continue
@@ -131,13 +135,13 @@ def determine_state(vec, mem):
 # send parsed to one master file
 def save_to_file(data, filename):
     # iterate through all timestamps and generate strings to print
-    num_states = len(config.CFG["state_matrix"])
     inc = 0
     mem = []
 
     file_num = 0
     
     this_file = filename + "_" + str(file_num) + ".txt"
+    print("created file: ", this_file)
     f = open(this_file, "w")
     
     for time in data.keys():
@@ -164,21 +168,18 @@ def save_to_file(data, filename):
         # get true state id from the configured lighting pattern
         state_id = determine_state(state_vec, mem)
         if state_id == 0:
-            # reset counter
-            inc = 0
-        elif inc == num_states:
-            inc = 0
             f.close()
             file_num += 1
             this_file = filename + "_" + str(file_num) + ".txt"
-            f.open(this_file, "w")
-        else:
-            inc += 1
+            print("created file: ", this_file)
+            f = open(this_file, "w")
         mem.append(state_vec)
         if len(mem) > 2*ksensors:
             mem.pop(0)
 
         # write data
+        # get rid of excess buffer created
+        time = time % buf_value
         line = "Timestamp: " +  str(time) + " State ID: " + str(state_id)+"\n"
         f.write(line)
         for i in range(0,ksensors):
@@ -190,4 +191,4 @@ if __name__ == "__main__":
     my_data = parse_data(files)
 
     # format to strings and write to file
-    save_to_file(my_data, "output")
+    save_to_file(my_data, "output/output")
