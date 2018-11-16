@@ -8,9 +8,9 @@
 #define ledPin 4 //Pin that reads LED state
 #define interruptPin 2 //Pin that reads clock signal from MSP
 #define ESP_TX 5 //Pin to connect to esp tx
-#define ESP_RX 6 //Pin to connect to esp rx
+#define ESP_RX 6 //Pin to connect to esp rxl
 
-#define ID 9 //ID of sensor/LED module (0-11)
+#define ID 11 //ID of sensor/LED module (0-11)
 #define BAUD 57600  //max for arduino uno software serial
 //Integration time of sensor
 //Options are:
@@ -20,7 +20,7 @@
 //  TCS34725_INTEGRATIONTIME_101MS 
 //  TCS34725_INTEGRATIONTIME_154MS 
 //  TCS34725_INTEGRATIONTIME_700MS 
-#define SENSOR_INTEGRATION_TIME TCS34725_INTEGRATIONTIME_24MS
+#define SENSOR_INTEGRATION_TIME TCS34725_INTEGRATIONTIME_101MS
 //Gain of sensor
 //Options are:
 //  TCS34725_GAIN_1X
@@ -28,7 +28,7 @@
 //  TCS34725_GAIN_16X
 //  TCS34725_GAIN_60X
 #define SENSOR_GAIN TCS34725_GAIN_60X
-#define DEBUG 1 //Used for debugging when arduino is connected to laptop running arduio IDE
+#define DEBUG 0 //Used for debugging when arduino is connected to laptop running arduio IDE
 //Set DEGUB to 1 and arduino serial monitor to use baud rate BAUD with no line terminators to see sensior values and esp responses
 #define digitalPinToInterrupt(p)  ((p) == 2 ? 0 : ((p) == 3 ? 1 : -1))
 volatile int doRead = 0;
@@ -56,21 +56,7 @@ data;
 
 
 void setup() {
-#if DEBUG
   Serial.begin(BAUD);
-#endif
-
-  //Initiate communicate with ESP and start UDP connection
-  //esp8266.begin(BAUD);
-  //esp8266.println("AT+RST"); //Restart esp to ensure everything is syncronized
-  //delay(10000); //Wait for esp restart to complete
-
-  //For debugging
-#if DEGUB
-  //while (esp8266.available()) {
-  //  Serial.write(esp8266.read());
-  //}
-#endif
 
   pinMode(interruptPin, INPUT_PULLUP);
   pinMode(ledPin, INPUT_PULLUP);        // sets the digital pin 4 as input
@@ -79,34 +65,23 @@ void setup() {
   //Configure sensor with integration time and gain
   tcs = Adafruit_TCS34725(SENSOR_INTEGRATION_TIME, SENSOR_GAIN);
 
-#if DEBUG
   if(tcs.begin()) {
     Serial.println("Found Sensor");
   } 
   else {
     Serial.println("No Sensor Found");
   }
-  doRead = 1;
-#else
-  tcs.begin();
-#endif
+  doRead = 0;
 
   tcs.setInterrupt(true);
 
   //esp8266.println("AT+CIPSTART=\"UDP\",\"192.168.1.2\",9100"); //IP address of pi
   delay(1);
 
-#if DEBUG
-  //while (esp8266.available()) {
-  //  Serial.write(esp8266.read());
-  //}
-#endif
-
 }
 
 
 void loop() {
-  doRead = 1;
   if (doRead) {
 
     //Get sensor data
@@ -121,9 +96,9 @@ void loop() {
     data.info.timestamp = num_clocks;
     //Set ID
     data.info.id = ID;
-
-    //Print everything to console, for debugging
-#if DEBUG
+    
+    
+    
     Serial.print("ID: "); 
     Serial.print(data.info.id, DEC); 
     Serial.print(" ");
@@ -146,7 +121,6 @@ void loop() {
     Serial.print(data.info.C, DEC); 
     Serial.print(" ");
     Serial.println("  ");
-#endif
 
     //Send data to ESP
     //esp8266.println("AT+CIPSEND=14");
@@ -154,11 +128,6 @@ void loop() {
     //esp8266.write(data.packet_size, 14);
     delayMicroseconds(280); //Time to send data over UART at BAUD
 
-#if DEBUG
-    //while (esp8266.available()) {
-    //  Serial.write(esp8266.read());
-    //}
-#endif
 
     num_clocks++;
     //Don't perform read op again until next clock signal detected
