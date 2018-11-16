@@ -168,11 +168,11 @@ def save_to_file(data, filename):
         # get true state id from the configured lighting pattern
         state_id = determine_state(state_vec, mem)
         if state_id == 0:
-            f.close()
-            file_num += 1
             this_file = filename + "_" + str(file_num) + ".txt"
             print("created file: ", this_file)
+            f.close()
             f = open(this_file, "w")
+            file_num += 1
         mem.append(state_vec)
         if len(mem) > 2*ksensors:
             mem.pop(0)

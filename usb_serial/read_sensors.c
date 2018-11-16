@@ -65,7 +65,7 @@ void *read_port(void* threadarg) {
         buf[i] = buf_pt[i];
     }
     int fd = -1;
-    int timeout = 2000;
+    int timeout = 6000;
     int baud = 57600;
     char eolchar = '*';
     char filename[13] = "raw/rawxx.txt";
