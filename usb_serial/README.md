@@ -8,16 +8,17 @@ navigate to usb client folder
 
 `cd /path/to/repo/usb_serial`
 
-to begin a connection to the usb devices, run the real_serial script for your appropriate system.
+to begin a connection to the usb devices, run the run_all script
 
-`./read_serial_<system>.sh`
+`sudo ./run_all.sh`
 
-turn on switch, run for some amount of time
+turn on msp432
 
-wait for the usb devices to finish reading with an output that says "cycle complete" for all usb devices
+wait until you've captured all the cycles you want to. 
 
-turn off switch, then kill the read_serial.sh script (Ctrl-C)
+press "q" where the run_all.sh  script was run, and wait a bit
 
-run parser and generate output
+access output files in the output directory. Each file corresponds to one cycle,
+with the exception of the first file.
 
-`python parser.py`
+
