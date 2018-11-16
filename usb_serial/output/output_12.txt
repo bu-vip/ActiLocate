@@ -1,0 +1,57 @@
+Timestamp: 55 State ID: 0
+	ID: 0	State: 0 R: 26 G: 35 B: 31 C: 85
+	ID: 1	State: 0 R: 26 G: 32 B: 30 C: 83
+	ID: 2	State: 0 R: 26 G: 33 B: 30 C: 85
+	ID: 3	State: 0 R: 29 G: 35 B: 31 C: 91
+	ID: 4	State: 0 R: 35 G: 41 B: 36 C: 110
+	ID: 5	State: 0 R: 34 G: 47 B: 42 C: 117
+	ID: 6	State: 0 R: 37 G: 52 B: 48 C: 126
+	ID: 7	State: 0 R: 28 G: 36 B: 32 C: 89
+	ID: 8	State: 0 R: 38 G: 55 B: 53 C: 141
+	ID: 9	State: 0 R: 54 G: 74 B: 69 C: 185
+	ID: 10	State: 0 R: 44 G: 68 B: 64 C: 162
+	ID: 11	State: 0 R: 67 G: 101 B: 100 C: 254
+Timestamp: 56 State ID: 6
+	ID: 0	State: 0 R: 34 G: 41 B: 34 C: 101
+	ID: 1	State: 0 R: 31 G: 36 B: 32 C: 95
+	ID: 2	State: 0 R: 30 G: 36 B: 31 C: 94
+	ID: 3	State: 0 R: 31 G: 35 B: 30 C: 92
+	ID: 4	State: 0 R: 32 G: 39 B: 35 C: 103
+	ID: 5	State: 1 R: 40 G: 52 B: 45 C: 131
+	ID: 6	State: 0 R: 42 G: 55 B: 50 C: 135
+	ID: 7	State: 0 R: 31 G: 38 B: 33 C: 95
+	ID: 8	State: 0 R: 46 G: 61 B: 56 C: 158
+	ID: 9	State: 0 R: 53 G: 73 B: 68 C: 181
+	ID: 10	State: 0 R: 49 G: 71 B: 66 C: 171
+	ID: 11	State: 0 R: 71 G: 103 B: 101 C: 261
+Timestamp: 57 State ID: 7
+	ID: 0	State: 0 R: 31 G: 39 B: 33 C: 96
+	ID: 1	State: 0 R: 31 G: 35 B: 31 C: 92
+	ID: 2	State: 0 R: 30 G: 36 B: 31 C: 93
+	ID: 3	State: 0 R: 30 G: 35 B: 30 C: 91
+	ID: 4	State: 0 R: 31 G: 38 B: 34 C: 100
+	ID: 5	State: 0 R: 44 G: 56 B: 46 C: 141
+	ID: 6	State: 1 R: 41 G: 54 B: 49 C: 133
+	ID: 7	State: 0 R: 31 G: 37 B: 33 C: 94
+	ID: 8	State: 0 R: 43 G: 59 B: 54 C: 152
+	ID: 9	State: 0 R: 53 G: 72 B: 68 C: 180
+	ID: 10	State: 0 R: 48 G: 70 B: 65 C: 170
+	ID: 11	State: 0 R: 70 G: 103 B: 100 C: 260
+Timestamp: 58 State ID: 8
+	ID: 0	State: 0 R: 30 G: 38 B: 32 C: 94
+	ID: 1	State: 0 R: 30 G: 34 B: 31 C: 91
+	ID: 2	State: 0 R: 31 G: 36 B: 31 C: 94
+	ID: 3	State: 0 R: 31 G: 35 B: 30 C: 91
+	ID: 4	State: 0 R: 30 G: 37 B: 33 C: 97
+	ID: 5	State: 0 R: 41 G: 54 B: 45 C: 134
+	ID: 6	State: 0 R: 42 G: 55 B: 49 C: 135
+	ID: 7	State: 1 R: 32 G: 37 B: 33 C: 95
+	ID: 8	State: 0 R: 42 G: 58 B: 54 C: 149
+	ID: 9	State: 0 R: 51 G: 71 B: 67 C: 176
+	ID: 10	State: 0 R: 49 G: 70 B: 66 C: 170
+	ID: 11	State: 0 R: 71 G: 103 B: 100 C: 260
+Timestamp: 201 State ID: -1
+	ID: 0	State: 0 R: 25 G: 34 B: 30 C: 83
+	ID: 1	State: 0 R: 25 G: 31 B: 29 C: 81
+	ID: 2	State: 0 R: 26 G: 32 B: 29 C: 83
+	ID: 3	State: 0 R: 29 G: 34 B: 30 C: 88

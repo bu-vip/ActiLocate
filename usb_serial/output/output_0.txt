@@ -1,0 +1,13 @@
+Timestamp: 0 State ID: 0
+	ID: 0	State: 0 R: 21 G: 29 B: 27 C: 71
+	ID: 1	State: 0 R: 21 G: 30 B: 27 C: 69
+	ID: 2	State: 0 R: 21 G: 28 B: 25 C: 71
+	ID: 3	State: 0 R: 21 G: 27 B: 25 C: 70
+	ID: 4	State: 0 R: 22 G: 30 B: 28 C: 77
+	ID: 5	State: 0 R: 27 G: 40 B: 36 C: 98
+	ID: 6	State: 0 R: 30 G: 43 B: 41 C: 105
+	ID: 7	State: 0 R: 22 G: 30 B: 27 C: 73
+	ID: 8	State: 0 R: 32 G: 48 B: 46 C: 121
+	ID: 9	State: 0 R: 40 G: 60 B: 58 C: 147
+	ID: 10	State: 0 R: 37 G: 58 B: 56 C: 139
+	ID: 11	State: 0 R: 57 G: 88 B: 87 C: 220
