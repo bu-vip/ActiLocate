@@ -1,9 +1,12 @@
 import glob
 import numpy as np
 import config
+import os
 
 # find files in the raw directory
 files = glob.glob("raw/raw*")
+
+os.system("rm output/*")
 
 
 # number of arguments to expect per line
